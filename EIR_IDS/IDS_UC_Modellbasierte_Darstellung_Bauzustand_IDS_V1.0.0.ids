@@ -1,0 +1,52 @@
+<ids:ids xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://standards.buildingsmart.org/IDS http://standards.buildingsmart.org/IDS/1.0/ids.xsd" xmlns:ids="http://standards.buildingsmart.org/IDS">
+  <!--IDS created by Datacomp IDS Maker-->
+  <ids:info>
+    <ids:title>UC_Darstellung_Bauzustand</ids:title>
+    <ids:copyright>B+S AG, Bern</ids:copyright>
+    <ids:version>V1</ids:version>
+    <ids:description>Informationsanforderungen fuer den UseCase der modellbasierten Bauzustandsdarstellung</ids:description>
+    <ids:author>info@bs-ing.ch</ids:author>
+    <ids:date>2025-07-31</ids:date>
+    <ids:purpose>That template is to show the example information requirements specifications</ids:purpose>
+    <ids:milestone>Alle Projektphasen</ids:milestone>
+  </ids:info>
+  <ids:specifications>
+    <ids:specification ifcVersion="IFC2X3 IFC4 IFC4X3_ADD2" name="UC_Darstellung_Bauzustand" identifier="Bauphase" instructions="Eingabe Bauphase Bauteil, 0=Bestand" description="Pruefung Vorhandensein der Propertys &quot;Bauphase&quot; und &quot;Rueckbauphase&quot;">
+      <ids:applicability minOccurs="1" maxOccurs="unbounded">
+        <ids:attribute>
+          <ids:name>
+            <ids:simpleValue>GlobalId</ids:simpleValue>
+          </ids:name>
+        </ids:attribute>
+      </ids:applicability>
+      <ids:requirements>
+        <ids:property cardinality="required" instructions="Pruefung Vorhandensein der Propertys &quot;Bauphase&quot;" dataType="IFCREAL">
+          <ids:propertySet>
+            <ids:simpleValue>CH_Ing_Uebergeordnet</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Bauphase</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+        <ids:property cardinality="required" instructions="Pruefung Vorhandensein der Propertys &quot;Rueckbauphase&quot;" dataType="IFCREAL">
+          <ids:propertySet>
+            <ids:simpleValue>CH_Ing_Uebergeordnet</ids:simpleValue>
+          </ids:propertySet>
+          <ids:baseName>
+            <ids:simpleValue>Rueckbauphase</ids:simpleValue>
+          </ids:baseName>
+          <ids:value>
+            <xs:restriction base="xs:double">
+              <xs:minInclusive value="0" />
+            </xs:restriction>
+          </ids:value>
+        </ids:property>
+      </ids:requirements>
+    </ids:specification>
+  </ids:specifications>
+</ids:ids>
